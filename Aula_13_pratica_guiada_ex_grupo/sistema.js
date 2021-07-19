@@ -1,10 +1,8 @@
 //aqui fiz a importação do arquivo aluno:
-let Aluno = require("./encontro_02_aluno");  // aluno poderia ter outro nome
-// const { listaAlunos } = require("./encontro_02_curso"); // criou dsem eu pedir
+let Aluno = require("./aluno");  // aluno poderia ter outro nome
+// const { listaAlunos } = require("./curso"); // criou sem eu pedir
 //aqui fiz a importação do arquivo curso:
-let curso = require("./encontro_02_curso")
-
-// 2° passo
+let curso = require("./curso")
 
 // Objetos literais com a função construtora
 // Criei os alunos com as funções construtora
@@ -35,6 +33,7 @@ console.log(curso.aprovarAluno(debora))
 
 console.log(curso.listarAprovados()) // o resultado está ligado ao resultado do "curso.adicionarAluno(joao, clarissa, luisGabriel, debora)""
 
+// Criação de um Relatório para ter os dados dos alunos
 let fazerRelatorio = (alunoQualquerNome) => {
     let media = alunoQualquerNome.calcularMedia()
     let aprovado = curso.aprovarAluno(alunoQualquerNome)
@@ -49,14 +48,51 @@ let fazerRelatorio = (alunoQualquerNome) => {
 
 // fazerRelatorio(joao) -> pode ser chamado de um e um aluno, mas posso fazer por foreach chamando todos
 
-curso.listaAlunos.forEach (elemento => fazerRelatorio (elemento)) // ou map
+curso.listaAlunos.map (elemento => fazerRelatorio (elemento)) // ou for ser feito por forEach
 
+/* Feito em Grupo */
+//A resolver com o grupo!
 
+// Importação da classe aluno e array estudantes
 
-// função construtora - serve para otimizar objetos literais  
-// nao tem como fazer arrow function para criar uma função construtora, mas pode para fazer como método dentro da função construtora.
-// em um objeto literal você não pode usar arrow function para fazer um método da erro!
-// o objeto literal não usa arrow function para fazer o metodo dela. 
-// this funciona de forma diferente em situações diferentes
+// let alunos = require ('./aluno')
 
+// // classe curso
 
+// const curso = {
+//     constructor (titulo, notaAprov, maxFaltas) {
+//     this.titulo = titulo
+//     this.notaAprov = notaAprov
+//     this.maxFaltas = maxFaltas 
+//     this.listaAluno = []
+    
+// // método para adicionar a lista de alunos de estudantes no listaAluno    
+        
+//     this.adicAluno = function () {
+//         for (let i = 0; i < alunos.estudantes.length; i++) {
+//             this.listaAluno.push (alunos.estudantes[i].nome)
+//         }
+//         console.log (`Lista de alunos: ${this.listaAluno.join(', ')}`)
+//     }}             
+
+//     // this.aprovacao = function (nomeAluno) {
+//     //     switch(nomeAluno.tolowerCase()){
+
+//     //     }
+//     // }
+// }
+    
+
+// //criação dos curso
+
+// const cursosLista = [
+//     new curso ('CTD',7,5),
+//     new curso ('CTD2',6,3)
+// ]
+
+// cursosLista[1].adicAluno()
+// console.log(`Lista de alunos do ${cursosLista[1].titulo}: ${cursosLista[1].listaAluno.join(', ')}`)
+
+// // Exportação do objeto curso com seus métodos e da lista de cursos
+
+// module.export={curso,cursosLista}
