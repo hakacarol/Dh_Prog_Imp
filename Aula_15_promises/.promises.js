@@ -6,6 +6,4 @@ por exemplo, um callback, uma Promise ou um evento.
 Isto possibilita que a resposta seja processada em outro momento.
 */
 
-// .then()
-// A função assíncrona devolverá um resultado, ou não. Entretanto, o código continua em execução.
-// Quando a Promise é cumprida e um resultado é obtido, o primeiro .then() entra em execução. Ele atua apenas como consequência da função assíncrona.
+// https://developer.mozilla.org/pt-BR/docs/orphaned/Web/JavaScript/Guide/Using_promises
