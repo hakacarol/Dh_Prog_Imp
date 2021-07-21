@@ -20,18 +20,15 @@ enunciado foram atendidos.
 */
 
 // Criação de uma variável global com valor de um booleano
-var promiseFail = false
+var promiseFail = true
 
 // Dados qualquer dentro de uma constante
-const dados = {
-    nome: "Maria da Silva",
-    cpf: 33820150801
-}
+const dadosJson = '{"nome":"Maria da Silva", "cpf":33820150801}';
 
 // Criação de uma Promise
 const minhaPromessa = new Promise ((resolve, reject) => {
         if (promiseFail) {
-            resolve(JSON.stringify(dados))
+            resolve(JSON.parse(dadosJson))
         } else {
             reject ('Ops... ocorreu um erro fatal!')
         }
@@ -40,7 +37,8 @@ const minhaPromessa = new Promise ((resolve, reject) => {
 
 minhaPromessa.then( // quando a Promise é cumprida e um resultado é obtido, o then() entra em execução
     function(resolve) {
-        console.log(resolve);
+        console.log(resolve)
+        console.log(typeof resolve)
     }).catch((reject) => { // quando não, gera uma mensagem de erro
         console.log(reject)
     }
