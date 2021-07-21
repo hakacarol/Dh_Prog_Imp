@@ -1,7 +1,7 @@
 /* Aula 14 - Json
 16/07/2021*/
 
-let frutas = '{"Fruta":"banana", "Preço":8.50, "Tipo":["prata", "maça", "nanica"], "Origem":"Brasil"}';
+let frutas = '{"Fruta":"banana", "Preco":8.50, "Tipo":["prata", "maça", "nanica"], "Origem":"Brasil"}';
 
 
 // converter para JS
